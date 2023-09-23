@@ -1,0 +1,58 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=document.createElement("div")
+        var b=document.createTextNode("login page")
+        a.appendChild(b)
+        var c=document.createElement("input")
+        c.setAttribute("type","button")
+        c.setAttribute("value","click")
+        a.appendChild(c)
+        document.body.appendChild(a)
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="m-5 p-5">
+        <h1>Add To Cart</h1>
+        <div class="d-flex flex-wrap pt-5">
+            <input type="text" id="main">
+            <button class="btn btn-primary p-2 ps-5 pe-5 ms-5" onclick="valid()">Add</button>
+        </div>
+        <div class="mt-5">
+            <h2>My Cart Items</h2>
+            <ul id="final" class=""></ul>
+
+        </div>
+    </div>
+    <script>
+        function valid() {
+            var a = document.getElementById("main").value;           
+            document.getElementById("final").innerHTML += "<li>"+ a + "<br>";
+            document.getElementById("main").value = ""
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
